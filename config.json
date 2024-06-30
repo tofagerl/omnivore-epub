@@ -1,5 +1,4 @@
 {
-  "token": "",
   "endpoint": "https://api-prod.omnivore.app/api/graphql",
   "title": "Omnivore Articles",
   "author": "Omnivore",
@@ -11,14 +10,16 @@
   "outputFileName": "output.epub",
   "maxArticleCount": 15,
   "searchQuery": "sort:saved-desc",
-  "ignoredLabels": ["pdf"],
-  "ignoredLinks": ["https://www.youtu", "https://youtu"],
-  "emailSupport": false,
+  "ignoredLabels": [
+    "pdf"
+  ],
+  "ignoredLinks": [
+    "https://www.youtu",
+    "https://youtu"
+  ],
+  "emailSupport": true,
   "emailHost": "smtp.gmail.com",
   "emailPort": 587,
-  "emailUser": "user@example.com",
-  "emailPassword": "",
-  "emailRecipient": "my-send-to-kindle-email@kindle.com",
   "emailFrom": "Omnivore EPUB Mailer",
   "emailAllowSTARTTLS": true,
   "emailSizeWarningSuppress": false,

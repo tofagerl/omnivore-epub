@@ -1,3 +1,4 @@
+import { load } from "https://deno.land/std@0.224.0/dotenv/mod.ts";
 import { Omnivore } from "npm:@omnivore-app/api";
 import epub, { Chapter } from "npm:epub-gen-memory";
 import sanitizeHtml from "npm:sanitize-html";
@@ -8,6 +9,12 @@ const currentVersion = "v0.6.1";
 
 console.log(`ℹ  Omnivore EPUB ${currentVersion}`);
 console.log("ℹ️ Homepage: https://github.com/agrmohit/omnivore-epub");
+
+const env = await load();
+config.token = env["TOKEN"];
+config.emailUser = env["EMAIL_USER"];
+config.emailPassword = env["EMAIL_PASSWORD"];
+config.emailRecipient = env["EMAIL_RECIPIENT"];
 
 if (!config.token) {
   console.log("❌ Omnivore API token not set");
